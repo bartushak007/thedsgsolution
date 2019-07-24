@@ -1,0 +1,10 @@
+.social-media {
+  display: flex;
+  align-items: center;
+
+  &__link {
+    & + & {
+      margin-right: 1.25rem;
+    }
+  }
+}

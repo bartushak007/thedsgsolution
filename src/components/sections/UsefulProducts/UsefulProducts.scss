@@ -1,0 +1,41 @@
+.useful-products {
+  background-color: #fff;
+
+  &__header {
+    padding-top: 2rem;
+    padding-bottom: 3.875rem;
+
+    @media (min-width: 664px) {
+      padding-top: 5rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.875rem;
+    line-height: 2.4375rem;
+    color: #474747;
+    text-align: center;
+  }
+
+  &__main {
+    display: grid;
+    grid-gap: 1.875rem;
+    grid-template-columns: repeat(1, 1fr);
+    border-radius: 0 0 1.25rem 1.25rem;
+
+    @media (min-width: 445px) {
+      & {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 664px) {
+    }
+
+    @media (min-width: 758px) {
+      & {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}

@@ -1,0 +1,158 @@
+@mixin textLinearGradient($angle, $from, $to) {
+  background: linear-gradient($angle, $from, $to);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.article {
+  &--gup {
+    padding: 0.5rem;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+  }
+
+  &__banner {
+    max-width: 40%;
+  }
+
+  &__page-title {
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    padding: 0px 50px 0 70px;
+    background: linear-gradient(20deg, #ed43ff, #7444fe);
+    border-radius: 0 0 0 94px;
+    font-size: 3.75rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    margin: 0 0 0 auto;
+
+    &--theme-purple {
+      background: linear-gradient(20deg, #ed43ff, #7444fe);
+    }
+
+    &--theme-blue {
+      background: linear-gradient(20deg, #00dbcc, #9153ff);
+    }
+
+    &--theme-green {
+      background: linear-gradient(20deg, #00e91f, #00aec9);
+    }
+  }
+
+  &__title {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: bold;
+    padding-bottom: 1.8125rem;
+    text-align: center;
+
+    &--theme-blue {
+      @include textLinearGradient(30deg, #00dbcc, #8139ff);
+    }
+
+    &--theme-green {
+      @include textLinearGradient(30deg, #00e91f, #00aec9);
+    }
+  }
+
+  &__text-group {
+    max-width: 900px;
+    width: 100%;
+  }
+
+  &__text {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+    text-align: right;
+    color: #2a2a2a;
+
+    &--justify {
+      text-align: justify;
+    }
+  }
+
+  &__contact-link {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.6875rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #181818;
+    padding: 0.875rem 1.6875rem;
+    border-radius: 0.625rem;
+    margin-top: 2.5rem;
+    display: block;
+
+    &--theme-purple {
+      background: linear-gradient(20deg, #ed43ff, #7444fe);
+    }
+
+    &--theme-blue {
+      background: linear-gradient(20deg, #00dbcc, #9153ff);
+    }
+
+    &--theme-green {
+      background: linear-gradient(20deg, #00e91f, #00aec9);
+    }
+  }
+
+  &__contact {
+    max-width: 95%;
+    margin: 0 auto;
+
+    .contact-us__main {
+      padding-bottom: 0;
+    }
+  }
+
+  @media (max-width: 822px) {
+    &__contact {
+      max-width: 90%;
+    }
+  }
+
+  @media (min-width: 576px) {
+    &__title {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    &__text {
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__title {
+      font-size: 2rem;
+      line-height: 2.6875rem;
+    }
+
+    &__text {
+      font-size: 1.125rem;
+    }
+  }
+  @media (min-width: 1100px) {
+    &__contact {
+      max-width: 80%;
+    }
+  }
+
+  @media (min-width: 1300px) {
+    &__contact {
+      max-width: 70%;
+    }
+  }
+}
+.container__product .article__text-group {
+  padding: 0 0.5rem;
+}

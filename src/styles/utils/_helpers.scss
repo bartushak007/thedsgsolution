@@ -1,0 +1,39 @@
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-padding-x;
+  padding-right: $container-padding-x;
+}
+
+.container--normal {
+  @include containerWidth($container-width--normal);
+}
+
+.container--wide {
+  @include containerWidth($container-width--wide);
+}
+
+.container__product {
+  @include containerWidth($container-width--thin);
+  margin-top: 0.5rem;
+  background: linear-gradient(20deg, #ed43ff, #7444fe);
+  border: solid 1px transparent;
+  box-shadow: 0px 2px 13px 1px #555555;
+  border-radius: 15px;
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+
+  &--theme-purple {
+    background: linear-gradient(20deg, #ed43ff, #7444fe);
+  }
+
+  &--theme-blue {
+    background: linear-gradient(20deg, #00dbcc, #9153ff);
+  }
+
+  &--theme-green {
+    background: linear-gradient(20deg, #00e91f, #00aec9);
+  }
+}

@@ -1,0 +1,34 @@
+.expertise-areas {
+  background-color: #fff;
+
+  &__header {
+    padding-top: 4.75rem;
+    padding-bottom: 3.25rem;
+  }
+
+  &__title {
+    font-size: 1.875rem;
+    line-height: 2.4375rem;
+    color: #474747;
+    text-align: center;
+  }
+
+  &__main {
+    display: grid;
+    grid-gap: 2.25rem;
+    grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 4.125rem;
+
+    @media (min-width: 445px) {
+      & {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 758px) {
+      & {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}

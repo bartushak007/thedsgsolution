@@ -1,0 +1,17 @@
+.header {
+  background-color: #fff;
+  padding: 0.55rem 0 0;
+
+  &__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    max-width: 130px;
+    display: inline-block;
+    height: auto;
+    filter: contrast(105%);
+  }
+}

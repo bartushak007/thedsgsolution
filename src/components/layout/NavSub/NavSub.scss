@@ -1,0 +1,115 @@
+.nav-sub {
+  &__main {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-items: center;
+
+    position: relative;
+    padding: 0 2.5rem 2rem;
+  }
+
+  &__link {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: bold;
+    color: #2e2e2e;
+    transition: color 0.3s ease-in-out;
+
+    &--roily {
+      display: none;
+      font-size: 1.125rem;
+      line-height: 2.3125rem;
+      color: #b9b9b9;
+      filter: blur(3px);
+      transition: filter 0.3s ease-in-out;
+
+      &:hover {
+        filter: blur(1px);
+      }
+    }
+
+    &--active {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: calc(100% + 0.5rem);
+        left: 50%;
+        width: 122px;
+        height: 7px;
+        border-radius: 10px;
+        background: transparent;
+        transform: translateX(-50%);
+      }
+    }
+
+    &--yellow::after {
+      background: linear-gradient(45deg, #ff2c00, #ffe600);
+    }
+
+    &--purple::after {
+      background: linear-gradient(15deg, #9d7bff, #f275ff);
+    }
+
+    &--blue::after {
+      background: linear-gradient(15deg, #8139ff, #00dbcc);
+    }
+
+    &--green::after {
+      background: linear-gradient(15deg, #00dbfe, #00e91f);
+    }
+  }
+
+  &__chevron {
+    font-size: 1.5rem;
+    color: #6b6b6b;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0;
+    }
+  }
+
+  @media (min-width: 426px) {
+    &__link {
+      font-size: 1.75rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  @media (min-width: 576px) {
+    &__main {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 2.5rem;
+      padding: 0 2.5rem;
+    }
+
+    &__link {
+      &--roily {
+        display: initial;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    &__link {
+      font-size: 3rem;
+      line-height: 5rem;
+
+      &--roily {
+        font-size: 1.7rem;
+        line-height: 3.3125rem;
+      }
+    }
+  }
+}

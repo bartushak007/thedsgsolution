@@ -1,0 +1,26 @@
+.image-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  &__preview {
+    position: relative;
+  }
+
+  &__image {
+    position: absolute;
+    margin: 0 auto;
+    display: block;
+
+    transition: opacity 1.5s ease-in-out;
+
+    &--is-active {
+      opacity: 1;
+      position: static;
+    }
+
+    &--is-hidden {
+      opacity: 0;
+    }
+  }
+}

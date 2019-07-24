@@ -1,0 +1,3 @@
+[submodule "elements"]
+	path = elements
+	url = git@github.com:askirmas/react-elements.git

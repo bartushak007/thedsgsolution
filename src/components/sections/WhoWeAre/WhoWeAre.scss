@@ -1,0 +1,34 @@
+.who-we-are {
+  background-color: #fff;
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+
+  &__main {
+    max-width: 473px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__title {
+    color: #242424;
+    font-size: 2.25rem;
+    line-height: 3rem;
+    padding-bottom: 1.1875rem;
+  }
+
+  &__text {
+    color: #242424;
+    font-size: 1rem;
+    line-height: 1.3125rem;
+    padding-bottom: 0;
+  }
+
+  &__link {
+    color: #120dff;
+    white-space: nowrap;
+  }
+}

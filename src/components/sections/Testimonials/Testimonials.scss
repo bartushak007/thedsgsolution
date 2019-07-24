@@ -1,0 +1,240 @@
+.testimonials {
+  font-family: "Roboto", sans-serif;
+  padding: 5rem 0 5.75rem 0;
+
+  &__title {
+    font-size: 1.875rem;
+    line-height: 2.4375rem;
+    color: #474747;
+    text-align: center;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__slider-area {
+    padding-top: 1.9375rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__button-container {
+    width: 15%;
+    display: flex;
+  }
+
+  &__arrow-btn {
+    background: transparent;
+    border: 3px solid transparent;
+    font-size: 2.5rem;
+    border-radius: 35px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    cursor: pointer;
+    margin: auto;
+
+    &:hover {
+      background: rgba(182, 203, 124, 0.55);
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__arrow-svg {
+    margin: auto;
+  }
+
+  &__slider-container {
+    display: flex;
+    width: 70%;
+    overflow: hidden;
+  }
+
+  &__slider {
+    transition: 1s;
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    position: relative;
+  }
+
+  &__slide {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    flex-shrink: 0;
+    background: #fff;
+    color: #484848;
+    transition: 0.5s;
+    border-radius: 0.625rem;
+    border: 2px solid #bfc1ff;
+    box-shadow: 5px 20px 40px rgba(#000, 0.14);
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+
+    &--is-active {
+      opacity: 1;
+      border: 2px solid #bfc1ff;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &__user-avatar {
+    padding-top: 0.25rem;
+    margin-right: 0;
+    flex-shrink: 0;
+  }
+
+  &__avatar {
+    transition: 0.5s;
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    background: #555555;
+    border-radius: 2.1875rem;
+  }
+
+  &__user-info {
+    margin-right: 0;
+  }
+
+  &__user-info-author {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+  &__user-info-status {
+    font-size: 1rem;
+  }
+
+  &__content-box {
+    width: 100%;
+    margin: 0.625rem auto 0;
+    background-color: #ffffff;
+    padding: 1.5625rem;
+    border: 2px solid #bfc1ff;
+    border-radius: 0.625rem;
+    box-shadow: 5px 20px 40px rgba(#000, 0.22);
+  }
+
+  &__content-box-title {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 3.3125rem;
+  }
+
+  &__content-box-text {
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+    padding-bottom: 0;
+  }
+
+  &__content-box-afterwords {
+    font-size: 0.875rem;
+    line-height: 1.875rem;
+    margin-top: 1.6875rem;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .testimonials {
+    &__slider {
+      transform: translateX(0) !important;
+    }
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .testimonials {
+    &__button-container {
+      width: 10%;
+    }
+
+    &__slider-container {
+      width: 80%;
+    }
+
+    &__slide {
+      display: flex;
+      padding-left: 0.3125rem;
+      width: 24.78%;
+      margin: calc(25.66% / 6);
+      opacity: 1;
+      border: 2px solid transparent;
+
+      &:hover {
+        transform: scale(1.25);
+      }
+
+      &--is-active {
+        position: static;
+        transform: scale(1.25);
+        border: 2px solid #bfc1ff;
+      }
+    }
+
+    &__slider {
+      position: static;
+      width: 100%;
+    }
+
+    &__content-box {
+      margin-top: 0.625rem;
+    }
+
+    &__content-box {
+      margin: 1.25rem auto 0;
+      max-width: 33.4375rem;
+    }
+
+    &__user-info-author {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    &__user-info-status {
+      font-size: 0.75rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .testimonials {
+    &__slide {
+      flex-direction: row;
+      text-align: right;
+    }
+
+    &__user-avatar {
+      margin: 0.5rem 1rem;
+    }
+
+    &__content-box {
+      margin-top: 0;
+    }
+
+    &__user-info-author {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    &__user-info-status {
+      font-size: 1rem;
+    }
+  }
+}
