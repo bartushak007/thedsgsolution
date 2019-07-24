@@ -1,3 +1,3 @@
 ## THEDSGSOLUTION
 
-Preview: https://akirmas.github.io/THEDSGSOLUTION
+Preview: https://akirmas.github.io/thedsgsolution
